@@ -20,7 +20,7 @@ import axios from 'axios'
     return Math.floor(yes/1000/60/60/24)
   }
 
-  const months = () =>{
+  const months = () => {
     switch(lastDate.getMonth()){
       case 0: return "January"
       case 1: return "February"
@@ -35,6 +35,7 @@ import axios from 'axios'
       case 10: return "November"
       case 11: return "December"
     }
+    return;
   }
   (document.querySelector("#lastQuoteDate") as HTMLElement).innerText = `${days()} ${months()} ${lastDate.getFullYear()}`;
   (document.querySelector("#days") as HTMLElement).innerText = `${daysSince()}`;

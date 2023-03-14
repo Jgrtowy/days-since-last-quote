@@ -9,7 +9,7 @@ import axios from 'axios'
   const now:any = new Date();
   const parsedQuote:string = lastQuote.quote.replace(/\\/g, '');
   const days = () =>{
-    if(lastDate.getDay()<10){
+    if(lastDate.getDate()<10){
       return `0${lastDate.getDate()}`
     }else{
       return `${lastDate.getDate()}`
